@@ -1,5 +1,5 @@
 module "vpc" {
-  source = "github.com/stenioignacio/linuxtips-arquitetura-containers-aws-modules//vpc?ref=v1.0.0"
+  source = "github.com/stenioignacio/linuxtips-arquitetura-containers-aws-modules//vpc?ref=v1.0.1"
 
   project_name = var.project_name
 
