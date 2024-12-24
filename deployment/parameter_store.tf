@@ -12,7 +12,6 @@ resource "aws_ssm_parameter" "private_subnets" {
   type      = "String"
   value     = module.vpc.private_subnets[count.index]
   overwrite = true
-
 }
 
 resource "aws_ssm_parameter" "public_subnets" {
@@ -22,5 +21,4 @@ resource "aws_ssm_parameter" "public_subnets" {
   type      = "String"
   value     = module.vpc.public_subnets[count.index]
   overwrite = true
-
 }
