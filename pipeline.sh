@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#Piseudo pipeline para pensar em como vai ficar a pipe no Github Actions
 set -e
 
 echo "Iniciando Rollout do Pré Deployment"
