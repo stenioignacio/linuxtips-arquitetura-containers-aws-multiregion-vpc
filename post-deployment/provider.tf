@@ -1,8 +1,5 @@
 provider "aws" {
-  profile                  = "lab"
-  shared_config_files      = ["C:\\Users\\signacio\\.aws\\config"]
-  shared_credentials_files = ["C:\\Users\\signacio\\.aws\\credentials"]
-  region                   = var.region
+  region = var.region
 
   default_tags {
     tags = {
@@ -11,12 +8,10 @@ provider "aws" {
   }
 }
 
+
 provider "aws" {
-  alias                    = "peer"
-  profile                  = "lab"
-  shared_config_files      = ["C:\\Users\\signacio\\.aws\\config"]
-  shared_credentials_files = ["C:\\Users\\signacio\\.aws\\credentials"]
-  region                   = var.region_peer
+  alias  = "peer"
+  region = var.region_peer
 
   default_tags {
     tags = {
