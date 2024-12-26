@@ -1,5 +1,5 @@
 resource "aws_ssm_parameter" "vpc" {
-  name      = format("/%s/v-c/vpc_id", var.project_name)
+  name      = format("/%s/vpc/vpc_id", var.project_name)
   type      = "String"
   value     = module.vpc.vpc_id
   overwrite = true
