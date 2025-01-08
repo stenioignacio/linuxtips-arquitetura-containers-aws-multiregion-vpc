@@ -283,6 +283,7 @@ jobs:
       - ci-terraform-post-deployment
       - ci-terraform-us-east-1
       - ci-terraform-sa-east-1
+      - post-deployment-destroy
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -333,6 +334,7 @@ jobs:
       - ci-terraform-us-east-1
       - ci-terraform-sa-east-1
       - pre-deployment-plan
+      - post-deployment-destroy
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -383,6 +385,7 @@ jobs:
       - ci-terraform-us-east-1
       - ci-terraform-sa-east-1
       - pre-deployment-plan
+      - pre-deployment-destroy
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
