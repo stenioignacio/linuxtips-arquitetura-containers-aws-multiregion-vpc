@@ -267,8 +267,8 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: "us-east-1"
 
-      - name: Terraform destroy
-        run: terraform destroy --auto-approve -var-file=environment/terraform.tfvars
+      - name: terraform destroy -lock=false
+        run: terraform destroy -lock=false --auto-approve -var-file=environment/terraform.tfvars
         working-directory: ./post-deployment
         env:
           GOOGLE_CREDENTIALS: ${{ secrets.GCS_SA_KEY }}
@@ -359,8 +359,8 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: "us-east-1"
 
-      - name: Terraform destroy
-        run: terraform destroy --auto-approve -var-file=environment/terraform.tfvars
+      - name: terraform destroy -lock=false
+        run: terraform destroy -lock=false --auto-approve -var-file=environment/terraform.tfvars
         working-directory: ./pre-deployment
         env:
           GOOGLE_CREDENTIALS: ${{ secrets.GCS_SA_KEY }}
@@ -451,8 +451,8 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: "us-east-1"
 
-      - name: Terraform destroy
-        run: terraform destroy --auto-approve -var-file=environment/us-east-1/terraform.tfvars
+      - name: terraform destroy -lock=false
+        run: terraform destroy -lock=false --auto-approve -var-file=environment/us-east-1/terraform.tfvars
         working-directory: ./deployment
         env:
           GOOGLE_CREDENTIALS: ${{ secrets.GCS_SA_KEY }}
@@ -543,8 +543,8 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: "us-east-1"
 
-      - name: Terraform destroy
-        run: terraform destroy --auto-approve -var-file=environment/sa-east-1/terraform.tfvars
+      - name: terraform destroy -lock=false
+        run: terraform destroy -lock=false --auto-approve -var-file=environment/sa-east-1/terraform.tfvars
         working-directory: ./deployment
         env:
           GOOGLE_CREDENTIALS: ${{ secrets.GCS_SA_KEY }}
